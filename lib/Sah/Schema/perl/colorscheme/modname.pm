@@ -15,9 +15,9 @@ our $schema = get_schema(
         summary => 'Perl module name in the Graphics::ColorNames:: namespace without the namespace prefix, e.g. WWW or X',
         examples => [
             {value=>'', valid=>0},
-            {value=>'WWW', valid=>1},
-            {value=>'WWW::Foo', valid=>1, validated_value=>'WWW::Foo'},
-            {value=>'WWW/Foo', valid=>1, validated_value=>'WWW::Foo'},
+            {value=>'WWW', valid=>1, summary=>'This refers to Graphics::ColorNames::WWW perl module'},
+            {value=>'WWW::Foo', valid=>1, validated_value=>'WWW::Foo', summary=>'This refers to Graphics::ColorNames::WWW::Foo hypothetical perl module'},
+            {value=>'WWW/Foo', valid=>1, validated_value=>'WWW::Foo', summary=>'This refers to Graphics::ColorNames::WWW::Foo hypothetical perl module, alternative path separators like "/", ".", and "-" are allowed and will be coerced to "::"'},
             {value=>'Foo Bar', valid=>0, summary=>'contains whitespace'},
         ],
     },
