@@ -6,7 +6,7 @@ package Sah::Schema::perl::colorscheme::modname;
 # VERSION
 
 use Sah::PSchema qw(get_schema);
-use Sah::Schema::perl::modname; # not detected yet
+use Sah::PSchema::perl::modname; # not detected yet
 
 our $schema = get_schema(
     'perl::modname',
